@@ -61,5 +61,64 @@ namespace TestMatrix.Utils
 
             return result;
         }
+
+        public static Matrix SumBy(Matrix matrix1, Matrix matrix2)
+        {
+            if ((matrix1.CountCols != matrix2.CountCols) || (matrix1.CountRows != matrix2.CountRows)) 
+            {
+                throw new ArithmeticException("Не равное количество строк и столбцов!");
+            }
+            Matrix result = new Matrix(matrix1.CountRows, matrix1.CountCols);
+            for(int i = 0; i < result._CountRows; i++)
+            {
+                for(int j = 0; j < result._CountCols; i++)
+                {
+                    result._Matrix[i, j] = matrix1._Matrix[i, j] + matrix2._Matrix[i, j];
+                }
+            }
+            return result;
+        }
+
+        public static double Determinal(Matrix matrix) //void
+        {
+            int rows = matrix.CountRows;
+            int cols = matrix.CountCols;
+
+            matrix = matrix.ToTriangularForm(matrix);
+
+            if (rows != cols)
+            {
+                throw new ArgumentException("Не равное количество строк и столбцов у определяемой матрицы!");
+            }
+
+            double determinant = 1.0;
+
+            for (int i = 0; i < rows; i++)
+            {
+                determinant *= matrix._Matrix[i, i];
+            }
+
+            return determinant;
+        }
+
+        private Matrix ToTriangularForm(Matrix matrix)
+        {
+            int rows = matrix.CountRows;
+            int cols = matrix.CountCols;
+
+            for (int k = 0; k < cols - 1; k++)
+            {
+                for (int i = k + 1; i < rows; i++)
+                {
+                    double factor = matrix._Matrix[i, k] / matrix._Matrix[k, k];
+
+                    for (int j = k; j < cols; j++)
+                    {
+                        matrix._Matrix[i, j] -= factor * matrix._Matrix[k, j];
+                    }
+                }
+            }
+            return matrix;
+        }
     }
 }
