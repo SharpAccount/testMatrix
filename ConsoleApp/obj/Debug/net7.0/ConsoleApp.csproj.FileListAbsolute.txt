@@ -13,3 +13,17 @@
 /workspaces/codespaces-blank/ConsoleApp/obj/Debug/net7.0/ConsoleApp.pdb
 /workspaces/codespaces-blank/ConsoleApp/obj/Debug/net7.0/ConsoleApp.genruntimeconfig.cache
 /workspaces/codespaces-blank/ConsoleApp/obj/Debug/net7.0/ref/ConsoleApp.dll
+C:\Users\Bozhenka\RiderProjects\testMatrix\ConsoleApp\bin\Debug\net7.0\ConsoleApp.exe
+C:\Users\Bozhenka\RiderProjects\testMatrix\ConsoleApp\bin\Debug\net7.0\ConsoleApp.deps.json
+C:\Users\Bozhenka\RiderProjects\testMatrix\ConsoleApp\bin\Debug\net7.0\ConsoleApp.runtimeconfig.json
+C:\Users\Bozhenka\RiderProjects\testMatrix\ConsoleApp\bin\Debug\net7.0\ConsoleApp.dll
+C:\Users\Bozhenka\RiderProjects\testMatrix\ConsoleApp\bin\Debug\net7.0\ConsoleApp.pdb
+C:\Users\Bozhenka\RiderProjects\testMatrix\ConsoleApp\obj\Debug\net7.0\ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bozhenka\RiderProjects\testMatrix\ConsoleApp\obj\Debug\net7.0\ConsoleApp.AssemblyInfoInputs.cache
+C:\Users\Bozhenka\RiderProjects\testMatrix\ConsoleApp\obj\Debug\net7.0\ConsoleApp.AssemblyInfo.cs
+C:\Users\Bozhenka\RiderProjects\testMatrix\ConsoleApp\obj\Debug\net7.0\ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\Bozhenka\RiderProjects\testMatrix\ConsoleApp\obj\Debug\net7.0\ConsoleApp.dll
+C:\Users\Bozhenka\RiderProjects\testMatrix\ConsoleApp\obj\Debug\net7.0\refint\ConsoleApp.dll
+C:\Users\Bozhenka\RiderProjects\testMatrix\ConsoleApp\obj\Debug\net7.0\ConsoleApp.pdb
+C:\Users\Bozhenka\RiderProjects\testMatrix\ConsoleApp\obj\Debug\net7.0\ConsoleApp.genruntimeconfig.cache
+C:\Users\Bozhenka\RiderProjects\testMatrix\ConsoleApp\obj\Debug\net7.0\ref\ConsoleApp.dll

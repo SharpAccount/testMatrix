@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "227D7wgyAKAqp0iWzjNCsPKXBa7CukG0sU+jOMWtGnEAPb6+/lv9jLLFepLxlkHwKvMCUNQR0eC+DSSLnLWeBg==",
+  "dgSpecHash": "PVJsx1L9BydQy3jx/62YGq6q3kjHiDHsCaJ1CQNFZxsLRgCkaA5oWhNR98WNTcqqQ/p1/Z417ML/ripAAFlJzA==",
   "success": true,
-  "projectFilePath": "/workspaces/codespaces-blank/ConsoleApp/ConsoleApp.csproj",
+  "projectFilePath": "C:\\Users\\Bozhenka\\RiderProjects\\testMatrix\\ConsoleApp\\ConsoleApp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

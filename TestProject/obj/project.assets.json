@@ -1766,32 +1766,34 @@
     ]
   },
   "packageFolders": {
-    "/home/codespace/.nuget/packages/": {}
+    "C:\\Users\\Bozhenka\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/workspaces/codespaces-blank/TestProject/TestProject.csproj",
+      "projectUniqueName": "C:\\Users\\Bozhenka\\RiderProjects\\testMatrix\\TestProject\\TestProject.csproj",
       "projectName": "TestProject",
-      "projectPath": "/workspaces/codespaces-blank/TestProject/TestProject.csproj",
-      "packagesPath": "/home/codespace/.nuget/packages/",
-      "outputPath": "/workspaces/codespaces-blank/TestProject/obj/",
+      "projectPath": "C:\\Users\\Bozhenka\\RiderProjects\\testMatrix\\TestProject\\TestProject.csproj",
+      "packagesPath": "C:\\Users\\Bozhenka\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Bozhenka\\RiderProjects\\testMatrix\\TestProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/codespace/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Bozhenka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/workspaces/codespaces-blank/ConsoleApp/ConsoleApp.csproj": {
-              "projectPath": "/workspaces/codespaces-blank/ConsoleApp/ConsoleApp.csproj"
+            "C:\\Users\\Bozhenka\\RiderProjects\\testMatrix\\ConsoleApp\\ConsoleApp.csproj": {
+              "projectPath": "C:\\Users\\Bozhenka\\RiderProjects\\testMatrix\\ConsoleApp\\ConsoleApp.csproj"
             }
           }
         }
@@ -1839,7 +1841,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/dotnet/7.0.306/sdk/7.0.306/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }

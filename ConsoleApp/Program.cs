@@ -2,6 +2,5 @@
 {
     static void Main()
     {
-        
     }
 }
