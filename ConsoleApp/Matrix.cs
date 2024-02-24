@@ -35,9 +35,9 @@ namespace TestMatrix.Utils
             return builderMatrix.ToString();
         }
 
-        public Matrix(double[,] Matrix)
+        public Matrix(double[,] matrix)
         {
-            _Matrix = Matrix;
+            _Matrix = matrix;
             CountRows = _Matrix.GetLength(0);
             CountCols = _Matrix.GetLength(1);
         }
@@ -68,9 +68,9 @@ namespace TestMatrix.Utils
 
             for (int i = 0; i < result._Matrix.GetLength(0); i++)
                 for (int j = 0; j < result._Matrix.GetLength(1); j++)
-                    result._Matrix[i, j] = Enumerable.Range(0, matrix1.CountCols)
+                    result._Matrix[i, j] = Math.Round(Enumerable.Range(0, matrix1.CountCols)
                         .Select(k => matrix1._Matrix[i, k] * matrix2._Matrix[k, j])
-                        .Sum();
+                        .Sum(), 2);
 
             return result;
         }
@@ -82,36 +82,26 @@ namespace TestMatrix.Utils
                 throw new ArithmeticException("Не равное количество строк и столбцов!");
             }
             Matrix result = new Matrix(matrix1.CountRows, matrix1.CountCols);
-            for(int i = 0; i < result._Matrix.GetLength(0); i++)
+            for(int i = 0; i < result.CountRows; i++)
             {
-                for(int j = 0; j < result._Matrix.GetLength(1); j++)
+                for(int j = 0; j < result.CountCols; j++)
                 {
-                    result._Matrix[i, j] = matrix1._Matrix[i, j] + matrix2._Matrix[i, j];
+                    result._Matrix[i, j] = Math.Round(matrix1._Matrix[i, j] + matrix2._Matrix[i, j], 2);
                 }
             }
             return result;
         }
 
-        public static double Determinal(Matrix matrix) //void
-        {   
-            int rows = matrix.CountRows;
-            int cols = matrix.CountCols;
+        public double Determinal()
+        {
+            ToTriangleForm(this);
+            double determinal = 1.0;
 
-            matrix = Matrix.ToTriangleForm(matrix);
-
-            if (rows != cols)
+            for (int i = 0; i < CountRows; i++)
             {
-                throw new ArgumentException("Не равное количество строк и столбцов у определяемой матрицы!");
+                determinal *= _Matrix[i, i];
             }
-
-            double determinant = 1.0;
-
-            for (int i = 0; i < rows; i++)
-            {
-                determinant *= matrix._Matrix[i, i];
-            }
-            
-            return Math.Round(determinant, 2);
+            return Math.Abs(Math.Round(determinal, 2));
         }
         
         static public Matrix ToTriangleForm(Matrix matrix)
@@ -160,20 +150,21 @@ namespace TestMatrix.Utils
                 throw new ArithmeticException("Матрица не соответствует стандарту системы уравнений!");
             }
 
+            ToTriangleForm(equationSystem);
+
             int rows = equationSystem.CountRows;
             int cols = equationSystem.CountCols;
             
-            double[] roots = new double[cols];
+            double[] roots = new double[cols-1];
 
-            for (int i = 0; i < rows; i++)
+            for (int i = rows - 1; i >= 0; i--)
             {
                 double sum = 0;
-                for (int j = 0; j < i; j++)
+                for (int j = i + 1; j < rows; j++)
                 {
                     sum += equationSystem._Matrix[i, j] * roots[j];
                 }
-
-                roots[i] = Math.Round((equationSystem._Matrix[i, cols - 1] - sum) / equationSystem._Matrix[i, i], 2);
+                roots[i] = Math.Round((equationSystem._Matrix[i, rows] - sum) / equationSystem._Matrix[i, i], 3);
             }
 
             return roots;
