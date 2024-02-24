@@ -12,9 +12,12 @@ public class UnitTest1
     static IEnumerable<object[]> arr1() {
         return new[] {
             new []{ new[,] { 
-                { 3.0, 2.0, 1.0 },
-                { 3.0, 2.0, 6.0 },
-                { 3.0, 2.0, 5.0 } } }
+                    { 2.0, 3.0, 5.0, 6.0, 16.0 },
+                    { 9.0, 7.6, 3.7, 9.9, 7.5 },
+                    { 1.5, 5.8, 7.1, 1.5, 1.9 },
+                    { 0.7, 2.34, 5.6, 1.22, 1.55 }
+            } 
+            }
         };
     }
     
@@ -41,6 +44,53 @@ public class UnitTest1
         };
     }
     
+    static IEnumerable<object[]> arrToShow1() {
+        return new[] {
+            new object[]
+            { 
+                new[,] 
+                {
+                    { 2.0, 3.0, 5.0, 6.0, 16.0 },
+                    { 9.0, 7.6, 3.7, 9.9, 7.5 },
+                    { 1.5, 5.8, 7.1, 1.5, 1.9 },
+                    { 0.7, 2.34, 5.6, 1.22, 1.55 }
+                },
+                "2 3 5 6 16 \n9 7,6 3,7 9,9 7,5 \n1,5 5,8 7,1 1,5 1,9 \n0,7 2,34 5,6 1,22 1,55 \n"
+            }
+        };
+    }
+    
+    static IEnumerable<object[]> arrToShow2() {
+        return new[] {
+            new object[]
+            { 
+                new[,] 
+                {
+                    { 2.5, 2.0, 1.0 },
+                    { 2.5, 2.0, 1.0 },
+                    { 2.5, 2.0, 1.0 },
+                    { 2.5, 3.0, 1.0 }
+                },
+                "2,5 2 1 \n2,5 2 1 \n2,5 2 1 \n2,5 3 1 \n"
+            }
+        };
+    }
+    
+    static IEnumerable<object[]> arrToShow3() {
+        return new[] {
+            new object[]
+            { 
+                new[,] 
+                {
+                    { 2.5, 2.0, 1.0, 2.2 },
+                    { 2.5, 2.3, 9.0, 5.2 },
+                    { 2.0, 2.0, 1.6, 1.5 }
+                },
+                "2,5 2 1 2,2 \n2,5 2,3 9 5,2 \n2 2 1,6 1,5 \n"
+            }
+        };
+    }
+    
     static IEnumerable<object[]> toTrianle1() {
         return new[] {
             new []
@@ -54,7 +104,7 @@ public class UnitTest1
                 },
                 new[,]
                 {
-                    {2.5, 1.1, 1,1},
+                    {2.5, 1.1, 1, 1},
                     {0, 0.66, 7.6, 8.6},
                     {0, 0, 20.67, 20.74},
                     {0, 0, 0, -5.21}
@@ -69,17 +119,89 @@ public class UnitTest1
             { 
                 new[,]
                 {
+                    { 3.0, 2.0, 1.0, 6.5 },
+                    { 3.0, 2.0, 6.0, 8.3 },
+                    { 3.0, 2.0, 5.0, 10.0 },
+                    { 1.0, 3.1, 5.5, 1.0 }
+                },
+                new[,]
+                {
+                    {3, 2, 1, 6.5},
+                    {0,2.43, 5.17, -1.17},
+                    {0, 0, 4, 3.5},
+                    {0, 0, 0, -2.58}
+                }
+            }
+        };
+    }
+
+    private static IEnumerable<object[]> Determinal1() {
+        return new[] {
+            new []
+            { 
+                new[,]
+                {
                     { 2.5, 1.1, 1.0, 1.0 },
                     { 3.5, 2.2, 9.0, 10.0 },
                     { 7.5, 2.0, 8.7, 6.8 },
                     { 9.6, 8.3, 1.2, 2.0 }
                 },
+                new[,] {{-177.69}}
+            }
+        };
+    }
+    
+    static IEnumerable<object[]> Determinal2() {
+        return new[] {
+            new []
+            { 
                 new[,]
                 {
-                    {2.5, 1.1, 1,1},
-                    {0, 0.66, 7.6, 8.6},
-                    {0, 0, 20.67, 20.74},
-                    {0, 0, 0, -5.21}
+                    { 3.0, 2.0, 1.0, 6.5 },
+                    { 3.0, 2.0, 6.0, 8.3 },
+                    { 3.0, 2.0, 5.0, 10.0 },
+                    { 1.0, 3.1, 5.5, 1.0 }
+                },
+                new[,]
+                {
+                    {-75.23}
+                }
+            }
+        };
+    }
+    
+    static IEnumerable<object[]> ToFindRoots1() {
+        return new[] {
+            new object[]
+            { 
+                new[,]
+                {
+                    { 2.5, 2.0, 1.0, 2.2 },
+                    { 2.5, 2.3, 9.0, 5.2 },
+                    { 2.0, 2.0, 1.6, 1.5 }
+                },
+                new []
+                {
+                    1.923, -1.52, 0.432
+                }
+            }
+        };
+    }
+    
+    static IEnumerable<object[]> ToFindRoots2() {
+        return new[] {
+            new object[]
+            { 
+                new[,]
+                {
+                    { 2.0, 3.0, 5.0, 6.0, 16.0 },
+                    { 9.0, 7.6, 3.7, 9.9, 7.5 },
+                    { 1.5, 5.8, 7.1, 1.5, 1.9 },
+                    { 0.7, 2.34, 5.6, 1.22, 1.55 }
+                },
+                new[]
+                {
+                    -4.102, 0.918, -0.45, 3.95
                 }
             }
         };
@@ -209,7 +331,7 @@ public class UnitTest1
     [DataRow (15, 10)]
     [DataRow (30, 30)]
 
-    public void areRowsAndColumnsEqual(int rows1, int cols1)
+    public void AreRowsAndColumnsEqual(int rows1, int cols1)
     {
         _matrix = new Matrix(rows1, cols1);
         Assert.IsTrue(_matrix.CountCols == cols1 && _matrix.CountRows == rows1);
@@ -222,20 +344,28 @@ public class UnitTest1
     
     public void IsArrayCorrect(double[,] arr)
     {
-        _matrix = new Matrix(arr);
+        try
+        {
+            _matrix = new Matrix(arr);
+        }
+        catch (ArrayTypeMismatchException)
+        {
+            Assert.Fail("В матрицу нужно передавать только ДВУМЕРНЫЙ МАССИВ чисел с ПЛАВАЮЩЕЙ ТОЧКОЙ!");
+        }
         Console.WriteLine(_matrix.ToString());
-        Assert.IsTrue(_matrix is double[,]);
+        Assert.IsTrue(_matrix is not null);
     }
 
     [TestMethod] 
-    [DataRow (10, 10)]
-    [DataRow (20, 20)]  
-    [DataRow (3, 3)]  
-    public void showMatrix(int rows1, int cols1)
+    [DynamicData(nameof(arrToShow1), DynamicDataSourceType.Method)]
+    [DynamicData(nameof(arrToShow2), DynamicDataSourceType.Method)]
+    [DynamicData(nameof(arrToShow3), DynamicDataSourceType.Method)]
+
+    public void ShowMatrix(double[,] matrix, string expected)
     {
-        _matrix = new Matrix(rows1, cols1);
+        _matrix = new Matrix(matrix);
         Console.WriteLine(_matrix.ToString());
-        
+        Assert.AreEqual(expected, _matrix.ToString(), "Матрица выведена некорректно!");
     }
 
     [TestMethod] 
@@ -243,13 +373,13 @@ public class UnitTest1
     [DataRow (8, 10, 7, 7)]  
     [DataRow (11, 11, 6, 6)]  
 
-    public void areRowsAndColumnsNotEqualInSum(int rows1, int cols1, int rows2, int cols2)
+    public void AreRowsAndColumnsNotEqualInSum(int rows1, int cols1, int rows2, int cols2)
     {
         _matrix = new Matrix(rows1, cols1);
         _secMatrix = new Matrix(rows2, cols2);
 
         Matrix result = Matrix.SumBy(_matrix, _secMatrix);
-        Assert.IsTrue(rows1 == rows2 && cols1 == cols2);
+        Assert.ThrowsException<ArithmeticException>(() => throw new AssertFailedException("Метод некорректно кидает арифметическое исключение!"));
     }
 
     [TestMethod] 
@@ -271,19 +401,21 @@ public class UnitTest1
     [DataRow (10, 10, 8, 8)]
     [DataRow (8, 10, 7, 7)]  
 
-    public void areRowsAndColumnsNotEqualInMultiply(int rows1, int cols1, int rows2, int cols2)
+    public void AreRowsAndColumnsNotEqualInMultiply(int rows1, int cols1, int rows2, int cols2)
     {
         _matrix = new Matrix(rows1, cols1);
         _secMatrix = new Matrix(rows2, cols2);
 
         Matrix result = Matrix.MultiplyBy(_matrix, _secMatrix);
+        
+        Assert.ThrowsException<ArithmeticException>(() => throw new AssertFailedException("Метод некорректно кидает арифметическое исключение!"));
     }
     
     [TestMethod] 
     [DataRow (10, 10, 10, 10)]
     [DataRow (7, 7, 7, 7)]  
 
-    public void areResultRowsEqualToMMatrixultiply(int rows1, int cols1, int rows2, int cols2)
+    public void AreResultRowsEqualToMatrixMultiply(int rows1, int cols1, int rows2, int cols2)
     {
         _matrix = new Matrix(rows1, cols1);
         _secMatrix = new Matrix(rows2, cols2);
@@ -309,9 +441,9 @@ public class UnitTest1
     
     [TestMethod]
     [DynamicData(nameof(toTrianle1), DynamicDataSourceType.Method)]
+    [DynamicData(nameof(toTrianle2), DynamicDataSourceType.Method)]
 
-
-    public void transformToTriangleForm(double[,] matrix, double[,] expected)
+    public void TransformToTriangleForm(double[,] matrix, double[,] expected)
     {
         Matrix matrixToTransform = new Matrix(matrix);
         Matrix toExpect = new Matrix(expected);
@@ -322,29 +454,32 @@ public class UnitTest1
     }
     
     [TestMethod]
-    [DynamicData(nameof(arr1), DynamicDataSourceType.Method)]
-    [DynamicData(nameof(arr2), DynamicDataSourceType.Method)]
+    [DynamicData(nameof(Determinal1), DynamicDataSourceType.Method)]
+    [DynamicData(nameof(Determinal2), DynamicDataSourceType.Method)]
 
-    public void findDeterminal(double[,] matrix)
+    public void FindDeterminal(double[,] matrix, double[,] toExpect)
     {
         Matrix matrixToTransform = new Matrix(matrix);
         double determinal = matrixToTransform.Determinal();
+        double expected = toExpect[0, 0];
         
         Console.WriteLine(determinal);
+        Assert.AreEqual(expected, determinal, "Неверно рассчитан определитель матрицы!");
     }
     
     [TestMethod]
-    [DynamicData(nameof(arr3), DynamicDataSourceType.Method)]
-    [DynamicData(nameof(arr1), DynamicDataSourceType.Method)]
+    [DynamicData(nameof(ToFindRoots1), DynamicDataSourceType.Method)]
+    [DynamicData(nameof(ToFindRoots2), DynamicDataSourceType.Method)]
 
-    public void findRoots(double[,] matrix)
+    public void FindRoots(double[,] matrix, double[] expected)
     {
         Matrix matrixToFind = new Matrix(matrix);
 
         double[] roots = Matrix.findRoots(matrixToFind);
-        foreach (double root in roots)
+        for (int i = 0; i < roots.Length; i++)
         {
-            Console.Write(root + " ");
+            Console.Write(roots[i] + " ");
+            Assert.AreEqual(expected[i], roots[i], "Корни были рассчитаны неправильно!");
         }
     }
 }

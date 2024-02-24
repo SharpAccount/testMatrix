@@ -28,9 +28,9 @@ namespace TestMatrix.Utils
             {
                 for (int j = 0; j < _Matrix.GetLength(1); j++)
                 {
-                    builderMatrix.Append(_Matrix[i, j] + " ");
+                    builderMatrix.Append(Math.Round(_Matrix[i, j], 2) + " ");
                 }
-                builderMatrix.AppendLine();
+                builderMatrix.Append("\n");
             }
             return builderMatrix.ToString();
         }
@@ -101,7 +101,7 @@ namespace TestMatrix.Utils
             {
                 determinal *= _Matrix[i, i];
             }
-            return Math.Abs(Math.Round(determinal, 2));
+            return Math.Round(determinal, 2);
         }
         
         static public Matrix ToTriangleForm(Matrix matrix)

@@ -1766,19 +1766,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Bozhenka\\.nuget\\packages\\": {}
+    "C:\\Users\\vladk\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bozhenka\\RiderProjects\\testMatrix\\TestProject\\TestProject.csproj",
+      "projectUniqueName": "F:\\Sharaga\\testMatrix\\TestProject\\TestProject.csproj",
       "projectName": "TestProject",
-      "projectPath": "C:\\Users\\Bozhenka\\RiderProjects\\testMatrix\\TestProject\\TestProject.csproj",
-      "packagesPath": "C:\\Users\\Bozhenka\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bozhenka\\RiderProjects\\testMatrix\\TestProject\\obj\\",
+      "projectPath": "F:\\Sharaga\\testMatrix\\TestProject\\TestProject.csproj",
+      "packagesPath": "C:\\Users\\vladk\\.nuget\\packages\\",
+      "outputPath": "F:\\Sharaga\\testMatrix\\TestProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Bozhenka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vladk\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1792,8 +1792,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Bozhenka\\RiderProjects\\testMatrix\\ConsoleApp\\ConsoleApp.csproj": {
-              "projectPath": "C:\\Users\\Bozhenka\\RiderProjects\\testMatrix\\ConsoleApp\\ConsoleApp.csproj"
+            "F:\\Sharaga\\testMatrix\\ConsoleApp\\ConsoleApp.csproj": {
+              "projectPath": "F:\\Sharaga\\testMatrix\\ConsoleApp\\ConsoleApp.csproj"
             }
           }
         }
@@ -1841,7 +1841,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
