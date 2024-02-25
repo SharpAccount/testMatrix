@@ -137,7 +137,7 @@ public class UnitTest1
 
     private static IEnumerable<object[]> Determinal1() {
         return new[] {
-            new []
+            new object[]
             { 
                 new[,]
                 {
@@ -146,14 +146,14 @@ public class UnitTest1
                     { 7.5, 2.0, 8.7, 6.8 },
                     { 9.6, 8.3, 1.2, 2.0 }
                 },
-                new[,] {{-177.69}}
+                -177.69
             }
         };
     }
     
     static IEnumerable<object[]> Determinal2() {
         return new[] {
-            new []
+            new object[]
             { 
                 new[,]
                 {
@@ -162,10 +162,7 @@ public class UnitTest1
                     { 3.0, 2.0, 5.0, 10.0 },
                     { 1.0, 3.1, 5.5, 1.0 }
                 },
-                new[,]
-                {
-                    {-75.23}
-                }
+                -75.23
             }
         };
     }
@@ -457,11 +454,10 @@ public class UnitTest1
     [DynamicData(nameof(Determinal1), DynamicDataSourceType.Method)]
     [DynamicData(nameof(Determinal2), DynamicDataSourceType.Method)]
 
-    public void FindDeterminal(double[,] matrix, double[,] toExpect)
+    public void FindDeterminal(double[,] matrix, double expected)
     {
         Matrix matrixToTransform = new Matrix(matrix);
         double determinal = matrixToTransform.Determinal();
-        double expected = toExpect[0, 0];
         
         Console.WriteLine(determinal);
         Assert.AreEqual(expected, determinal, "Неверно рассчитан определитель матрицы!");
